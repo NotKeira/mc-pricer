@@ -1,6 +1,9 @@
 mod pricing;
 mod ui;
 
+use ui::UI;
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    ui::run_ui()
+    let mut ui = UI::new()?;
+    ui.run()?;
+    Ok(())
 }

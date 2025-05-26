@@ -46,7 +46,7 @@ impl UI {
 
     fn render(&mut self) -> Result<(), Box<dyn Error>> {
         self.terminal.draw(|f| {
-            let size = f.size();
+            let size = f.area();
             let chunks = Layout::default()
                 .direction(Direction::Vertical)
                 .margin(3)
